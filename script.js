@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let box7Value 
     let box8Value
     let box9Value 
-    let scoreX
-    let scoreO
+    let scoreX=0
+    let scoreO=0
 
     function getInfo(){
         let x =document.getElementById('x')
@@ -44,8 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
         box7Value=box7.textContent
         box8Value=box8.textContent
         box9Value=box9.textContent
-        scoreX=0
-        scoreO =0
         let grid = document.querySelectorAll('gridBox')
         gridArr=[box1,box2,box3,box4,box5,box6,box7,box8,box9];
     }
@@ -98,7 +96,11 @@ window.addEventListener('DOMContentLoaded', () => {
                     item.textContent="";
 
             })
+            scoreO=0;
+            scoreX=0;
+            displayScore();
         });
+
     }
         function winingFormula(){
             getInfo();
@@ -113,7 +115,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 (box3Value==="x" && box5Value==="x" && box7Value==="x")
             )
             {
-                scoreX= scoreX+1
+                scoreX++
                 restartGame();
             }
             else if(
@@ -127,7 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 (box3Value==="o" && box5Value==="o" && box7Value==="o")
             )
             {
-                scoreO = scoreO+1
+                scoreO++
                 restartGame();
             }
         }
@@ -147,6 +149,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
     detectClick();
+    displayScore();
     
 });
 
