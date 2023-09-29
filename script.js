@@ -79,6 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.log("tie");
                 restartGame();
               }
+              displayScore();
             })
         })
         btnRestart();
@@ -142,11 +143,11 @@ window.addEventListener('DOMContentLoaded', () => {
             let scoreBoardX=document.getElementById('scoreX')
             let scoreBoardO=document.getElementById('scoreO')
             scoreBoardX.textContent= "X has "+ scoreX + "wins";
-            scoreBoardO.textContent= "O has "+ scoreO+ "wins";
+            scoreBoardO.textContent= "O has "+ scoreO+ " wins";
         }
 
     detectClick();
-    displayScore();
+    
 });
 
 
