@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:3rem;
+    border: 0.01rem solid black;
+    border-radius: 1rem;
+    height: 30rem;
+    width: 65rem;
+    
+}
+#header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap:20rem;
+}
+#playerSelection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top:2rem ;
+}
+.player{
+    height: 2rem;
+    width: 10rem;
+    border: 0.1rem solid lightgray;
+    border-radius: 0.3rem;
+    cursor:pointer;
+}
+.player:focus{
+    border: 0.1rem solid black;
+    border-radius: 0.3rem;
+}
+#scoreBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border:0.1rem solid black;
+    border-radius: 0.2rem;
+    gap: 3rem;
+    background-color: #9fd3c7;
+}
+
+.score{
+ font-weight: bolder;
+ font-size: large;
+    
+}
+
+#game{
+display: flex;
+align-items: center;
+justify-content: center; 
+background-color: #9fd3c7;   
+width: 100%;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(3, 5rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    overflow:hidden;
+    }
+.gridBox{
+  background-color: #9fd3c7;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+}
+#grid div{
+    outline:2px solid #000;
+  }
+#grid div:last-child {
+    grid-area:3/3;
+  }
+
+
+
+  #restart{
+    border: none;
+    font-weight: bold;
+    font-size: medium;
+    background-color: white;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
