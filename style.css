@@ -82,10 +82,13 @@ body {
 }
 
 .gridBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #9fd3c7;
     color: white;
     font-weight: bolder;
-    font-size: large;
+    font-size: 3rem;
 }
 
 #grid div {
